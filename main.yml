@@ -74,7 +74,7 @@
       environment: "{{proxy_env}}"
 
     - name: install non RH internal packages
-      yum:
+      dnf:
         name: "{{item}}"
         state: latest
         disablerepo: "rhel7-csb-stage"
@@ -83,7 +83,7 @@
         - NetworkManager-openvpn-gnome
 
     - name: install RH internal packages
-      yum:
+      dnf:
         name: "{{item}}"
         state: latest
         disablerepo: "fedora,updates"
