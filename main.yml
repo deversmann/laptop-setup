@@ -43,7 +43,7 @@
     - name: download polipo
       git:
         repo: git@github.com:jech/polipo.git
-        dest: /home/{{username}}/git
+        dest: /home/{{username}}/git/polipo
 
     - name: build polipo
       make:
